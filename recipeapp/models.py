@@ -13,7 +13,7 @@ class Profile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE, related_name='profile')
     name = models.CharField(max_length=80, blank=True)
     bio = models.TextField(max_length=254, blank=True)
-    profile_picture = CloudinaryField('profile_picture', default='default.png')
+    profile_picture = models.ImageField(upload_to='profile_picture', default='default.png')
     tel_number = models.IntegerField(null=True, blank=True)
     email= models.EmailField(null=True)
     
@@ -64,7 +64,7 @@ class Recipe(models.Model):
     total_time= models.CharField(max_length=100,null=True)
     ingredients=models.TextField(null=True)
     directions=models.TextField(null=True)
-    picture = CloudinaryField('picture', default='default.png')
+    picture = models.ImageField(upload_to='picture', default='default.png')
     date = models.DateTimeField(auto_now_add=True)
     user = models.ForeignKey(Profile, on_delete=models.CASCADE, related_name='post_owner')
     category = models.ForeignKey(Category, on_delete=models.CASCADE,null=True)

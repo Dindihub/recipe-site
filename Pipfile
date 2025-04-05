@@ -10,9 +10,10 @@ python-decouple = "*"
 cloudinary = "*"
 django-environ = "*"
 whitenoise = "*"
-django-bootstrap4 = "*"
-django-crispy-forms = "*"
 psycopg2 = "*"
+pillow = "*"
+django-crispy-forms = "*"
+django-bootstrap4 = "*"
 
 [dev-packages]
 

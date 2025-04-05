@@ -60,6 +60,9 @@ ALLOWED_HOSTS = config('ALLOWED_HOSTS', cast=Csv())
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 
+
+
+
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
 
@@ -171,14 +174,21 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
 
 
 
 # settings.py
-STATIC_ROOT = BASE_DIR / 'staticfiles'  # <-- Updated!
+
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'  # <-- Updated!
 STATIC_URL = 'static/'
+
+STATICFILES_DIRS = [
+    BASE_DIR / "static",  # Where your actual static files live
+]
+STATIC_ROOT = BASE_DIR / 'staticfiles'  # <-- Updated!
+
+
 
 
 MEDIA_URL = '/media/'
@@ -197,12 +207,12 @@ LOGOUT_REDIRECT_URL= 'home'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-# adding config
-cloudinary.config(
-cloud_name="dgzo0lyrz", 
-api_key="936979898137767", 
-api_secret="Cg4MaPzMgXS-WiNoTSjq7BdItbw"
-#   cloud_name="YOUR_CLOUD_NAME", 
-#   api_key="YOUR_API_KEY", 
-#   api_secret="YOUR_API_SECRET" 
-)
+# # adding config
+# cloudinary.config(
+# cloud_name="dgzo0lyrz", 
+# api_key="936979898137767", 
+# api_secret="Cg4MaPzMgXS-WiNoTSjq7BdItbw"
+# #   cloud_name="YOUR_CLOUD_NAME", 
+# #   api_key="YOUR_API_KEY", 
+# #   api_secret="YOUR_API_SECRET" 
+# )
