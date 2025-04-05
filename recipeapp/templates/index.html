@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% block content %}
+
+<body id="top">
+    <!-- Top Background Image Wrapper -->
+    <div class="bgded " style="background-image:url('/static/photos/pexels-mithul-varshan-8215776.jpg');">
+        
+        <div id="pageintro" class="hoc clear mt-4" >
+            <article >
+                <h3 class="heading " style="color:orange;">Welcome to Chakula chetu</h3>
+                <h6 class="text-left"> <strong>Home of  African cuisine</strong>  </h6>
+                
+                
+                <footer>
+                    <div class="pt-4">
+                <h5 class="" style="color:rgb(89, 239, 89);"> "Before you do anything,Eat first!"-Luhya proverb  </h5>
+            
+                </div>
+                    <ul class="nospace inline pushright">
+                
+                        <li><a class="btn inverse overlay" style="color:orange;" href="{% url 'login' %}">Create recipe</a></li>
+                    </ul>
+                </footer>
+            </article>
+        </div>
+    </div>
+    <!-- End Top Background Image Wrapper -->
+    <div class="wrapper row1">
+        <section id="ctdetails" class="hoc clear">
+            <!-- ################################################################################################ -->
+            <ul class="nospace clear">
+                <li class="one_quarter first">
+                    <div class="block clear"><a href="#"><i class="fas fa-phone"></i></a> <span><strong>Give us a
+                                call:</strong> +00 (123) 456 7890</span></div>
+                </li>
+                <li class="one_quarter">
+                    <div class="block clear"><a href="#"><i class="fas fa-envelope"></i></a> <span><strong>Send us a
+                                mail:</strong> support@chakulachetu.com</span></div>
+                </li>
+                <li class="one_quarter">
+                    <div class="block clear"><a href="#"><i class="fas fa-clock"></i></a> <span><strong> Mon. -
+                                Sat.:</strong> 08.00am - 18.00pm</span></div>
+                </li>
+                <li class="one_quarter">
+                    <div class="block clear"><a href="#"><i class="fas fa-map-marker-alt"></i></a> <span><strong>Come
+                                visit us:</strong> Nairobi <a href="#">Val halla Towers</a></span></div>
+                </li>
+            </ul>
+        </section>
+    </div>
+
+    
+
+    <!-- JAVASCRIPTS -->
+    <script src="layout/scripts/jquery.min.js"></script>
+    <script src="layout/scripts/jquery.backtotop.js"></script>
+    <script src="layout/scripts/jquery.mobilemenu.js"></script>
+</body>
+
+{% endblock %}

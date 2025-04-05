@@ -1,0 +1,29 @@
+{% extends 'base.html'%}
+{% load crispy_forms_tags %}
+{% block content %}
+
+
+<div class="container-fluid ">
+    <div class="row" >
+        <div class="col-md-4"></div>
+        <div class="col-md-8" >
+            <h5 class="mt-4" style="color:black;"> Update Profile</h5><hr>
+            <div class="col-md-6"style="background-color:#030; color:white;" >
+                <form action="" method="POST" class="form-outline-4 " enctype="multipart/form-data">
+                    {% csrf_token %}
+                    {{ prof_form|crispy}}
+                    <button type="submit" class="btn btn-secondary btn-sm">
+                        Update Profile
+                    </button>
+                </form>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!-- Default form contact -->
+
+
+{% endblock %}

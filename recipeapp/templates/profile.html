@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+<div class="card mb-3 bg-whitesmoke" style="max-width:fit content;">
+    <div class="row g-0">
+        <div class="col-md-4">
+            <img src="{{user.profile.profile_picture.url}}" style="width:200px;" alt="Trendy Pants and Shoes"
+                class="mx-auto d-block rounded-circle" />
+        </div>
+
+        <div class="col-md-8" style="color:black;">
+            <div class="card-body">
+                <h5 class="card-title"> Welcome {{request.user|title}} !</h5>
+                <p class="card-text pt-4"> <strong> Bio: </strong> {{ user.profile.bio}}</p>
+                <p class="card-text pt-4"> <strong> Contact no_:</strong> {{ user.profile.tel_number}}</p>
+                <p class="card-text pt-4"> <strong> Email:</strong> {{ user.profile.email}}</p>
+                
+
+                <a href="{% url 'update_profile' %}"><button class="btn" style="width:150px;">Edit profile</button></a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container-fluid">
+    <h3 class="text-center" style="color:green;"><strong>My posts</strong>   </h3>
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+        
+        {% for recipe in recipes %}
+        <div class="col-md-4">
+            <div class="card" style="color:black;">
+                <img src="{{recipe.picture.url }}" class="card-img-top" alt="recipe picture" />
+                <div class="card-body">
+                    <h5 class="card-title"> <strong>{{recipe.name|upper}}</strong> </h5>
+                    <h5 class="card-title"><strong>Prep-time:</strong> {{recipe.prep_time}}</h5>
+                    <h5 class="card-title"><strong>Cook time:</strong> {{recipe.total_time}}</h5>
+                    <span><p> Posted by: {{recipe.user.name|title}}</p></span> 
+                <a href="{% url 'single_recipe' recipe.id %}" class="btn btn-primary btn-sm"> See details</a>
+                    <span>
+                 <a href="{% url 'update_recipe' recipe.id %}" class="btn-warning btn-lg"> Update</a>       
+                    </span>
+                    <span>
+                <a href="{% url 'delete_recipe' recipe.id%}" class="btn-danger btn-lg"> Delete</a>
+                    </span>
+                </div>
+            </div>
+
+
+        </div>
+        {% endfor %}
+
+        
+
+    </div>
+
+</div>
+
+
+
+
+{% endblock %}

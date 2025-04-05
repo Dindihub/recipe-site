@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% block content %}
+
+<div class="container-fluid tm-hero d-flex justify-content-center align-items-center mt-3 mb-3">
+    <form class="d-flex tm-search-form col-sm-6" action="{% url 'search' %}">
+        <input class="form-control tm-search-input" type="search" placeholder="Search for recipes" aria-label="Search"
+            name="recipe" />
+        <button class="btn-success   tm-search-btn" type="submit">
+            <i class="fas fa-search"></i>
+        </button>
+    </form>
+</div>
+
+<div class="col-md-12 text-center p-4 d-flex" style="color:black;" id="category">
+            <a href="{% url 'home'%}">All</a>
+                     {% for category in categorys %}
+            <li class="list-group-item">
+                <a href="{% url 'home'%}?category={{category.name}}" type="button" class=" btn btn-warning ">{{category.name}}</a>
+         </li>
+        {% endfor %}
+            
+            
+
+        </div>
+
+<div class="container-fluid">
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+        {% for recipe in recipes %}
+        <div class="col-md-4">
+            <div class="card" style="color:black;">
+                <img src="{{recipe.picture.url }}" class="card-img-top" alt="recipe picture" />
+                <div class="card-body">
+                    <h5 class="card-title"> <strong>{{recipe.name|upper}}</strong> </h5>
+                    <h5 class="card-title"><strong>Prep-time:</strong> {{recipe.prep_time}}</h5>
+                    <h5 class="card-title"><strong>Cook time:</strong> {{recipe.total_time}}</h5>
+                    <span><p> Posted by: {{recipe.user.name|title}}</p></span> 
+               <a href="{% url 'single_recipe' recipe.id %}" class="btn btn-primary btn-sm"> See details</a>
+                    <span>
+                        
+                    </span>
+                </div>
+            </div>
+
+
+        </div>
+        {% endfor %}
+
+        
+
+    </div>
+
+</div>
+
+
+{% endblock %}
