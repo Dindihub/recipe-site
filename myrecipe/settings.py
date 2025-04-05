@@ -49,7 +49,10 @@ else:
    }
 
 db_from_env = dj_database_url.config(conn_max_age=500)
-DATABASES['default'].update(db_from_env)
+DATABASES = {
+    # read os.environ['DATABASE_URL']
+    'default': env.db()  # <-- Updated!
+}
 
 ALLOWED_HOSTS = config('ALLOWED_HOSTS', cast=Csv())
 
