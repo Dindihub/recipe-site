@@ -1,0 +1,32 @@
+<header id="header" class="hoc clear mt-4" style="background-color:#030;">
+    <div id="logo" class="fl_left">
+        <h1 style="color:orange;"><a href="index.html"> <strong>Chakula Chetu</strong>  </a></h1>
+    </div>
+    <nav id="mainav" class="fl_right" style="color:orange;">
+        <ul class="clear">
+            <li class="active"><a href="{% url 'index'%}">Welcome</a></li>
+            <li><a class="" href="{% url 'about_us' %}">About us</a>
+            </li>
+
+            <li><a href="{% url 'login' %}">Login</a></li>
+            <li><a href="{% url 'register' %}">Signup</a></li>
+            {% if user.is_authenticated%}
+            <li><a href="{% url 'home'%}">Home </a></li>
+
+            <li><a href="{% url 'create_recipe'%}"> Create Recipe</a></li>
+
+            <li><a class="drop" href="#"> Hi {{request.user}} </a>
+                
+                <ul>
+                    <li><a href="{% url 'profile' %}"> My Profile</a></li>
+                    <li><a href="{% url 'logout'%}">Log out</a></li>
+
+                </ul>
+            </li>
+
+            {% else %}
+            <a href="{% url 'login' %}"></a>
+            {% endif %}
+        </ul>
+    </nav>
+</header>
