@@ -19,11 +19,21 @@ import cloudinary
 import cloudinary.uploader
 import cloudinary.api
 import environ  # <-- Updated!
+from django.core.management.utils import get_random_secret_key
+
 
 env = environ.Env(  # <-- Updated!
     # set casting, default value
     DEBUG=(bool, False)
 )
+
+# SECURITY WARNING: keep the secret key used in production secret!
+SECRET_KEY = env.str('SECRET_KEY', default=get_random_secret_key())  # <-- Updated!
+
+DATABASES = {
+    # read os.environ['DATABASE_URL']
+    'default': env.db()  # <-- Updated!
+}
 MODE=config("MODE", default="dev")
 SECRET_KEY = config('SECRET_KEY')
 DEBUG = config('DEBUG', default=False, cast=bool)
@@ -54,7 +64,7 @@ DATABASES = {
     'default': env.db()  # <-- Updated!
 }
 
-ALLOWED_HOSTS = config('ALLOWED_HOSTS', cast=Csv())
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -67,10 +77,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = config('SECRET_KEY')
+SECRET_KEY = env('SECRET_KEY')  # <-- Updated!
 
 # SECURITY WARNING: don't run with debug turned on in production!
-
+DEBUG = env('DEBUG')  # <-- Updated!
 
 ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'recipe-home.fly.dev']
 
