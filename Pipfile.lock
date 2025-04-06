@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "fa1bb8f922909b71fed320066b17be30685b322e72534142b1855d53889ac159"
+            "sha256": "91673cbca3bf65185e14ad02eb0202497ad2d2a00dd7b25e06e3360a29c7f92d"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -47,6 +47,15 @@
             ],
             "index": "pypi",
             "version": "==1.43.0"
+        },
+        "crispy-bootstrap4": {
+            "hashes": [
+                "sha256:138a97884044ae4c4799c80595b36c42066e4e933431e2e971611e251c84f96c",
+                "sha256:503e8922b0f3b5262a6fdf303a3a94eb2a07514812f1ca130b88f7c02dd25e2b"
+            ],
+            "index": "pypi",
+            "markers": "python_version >= '3.8'",
+            "version": "==2024.10"
         },
         "dj-database-url": {
             "hashes": [
