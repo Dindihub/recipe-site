@@ -72,8 +72,8 @@ SECRET_KEY = config('SECRET_KEY')
 DEBUG = True
 
 # Set ALLOWED_HOSTS based on the environment
-ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'recipe-home.fly.dev']
-CSRF_TRUSTED_ORIGINS = ['https://fly.io/apps/recipe-home']
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'recipe-nyumbani.fly.dev']
+CSRF_TRUSTED_ORIGINS = ['https://fly.io/apps/recipe-nyumbani']
 
 # Application definition
 
