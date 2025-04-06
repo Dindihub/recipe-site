@@ -13,7 +13,7 @@ Sandra
 You can view the site at:[Chakula Chetu](https://recipe-nyumbani.fly.dev/)
 
 ## Screenshot
-![Chakula Chetu](https://github.com/Dindihub/recipe-site/issues/1#issue-2975197077)
+![Image](https://github.com/user-attachments/assets/9fdf0717-e8e3-4c57-adac-ea51a440eac2)
 
 
 ## User Stories
