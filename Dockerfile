@@ -25,4 +25,4 @@ ENV SECRET_KEY "uMZlfMlvZsxuDFw4yAtEUarhVEbQlKgrFRo2ZXGbea8p04mEN3"
 
 EXPOSE 8000
 
-CMD ["gunicorn","--bind",":8000","--workers","2","myrecipe.wsgi"]
+CMD ["gunicorn","--bind",":8000","--workers","2","myrecipe.wsgi:application"]
