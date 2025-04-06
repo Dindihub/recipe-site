@@ -13,7 +13,7 @@ Sandra
 You can view the site at:[Chakula Chetu](https://recipe-nyumbani.fly.dev/)
 
 ## Screenshot
-![Chakula Chetu](static/photos/Screenshot%20from%202022-06-27%2013-11-10.png)
+![Chakula Chetu](static/photos/Screenshot from 2022-06-27 13-11-10.png)
 
 
 ## User Stories
