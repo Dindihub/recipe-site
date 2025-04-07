@@ -76,13 +76,13 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = config('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 # Set ALLOWED_HOSTS based on the environment
-# ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'recipe-nyumbani.fly.dev']
-# CSRF_TRUSTED_ORIGINS = ['https://fly.io/apps/recipe-nyumbani']
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'recipe-nyumbani.fly.dev']
+CSRF_TRUSTED_ORIGINS = ['https://fly.io/apps/recipe-nyumbani']
 
-ALLOWED_HOSTS = env.list("ALLOWED_HOSTS", default=["127.0.0.1", "localhost"])
+
 
 # Application definition
 
