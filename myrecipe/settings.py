@@ -35,6 +35,9 @@ SECRET_KEY = env.str('SECRET_KEY', default=get_random_secret_key())
 
 
 #Development
+DATABASES = {
+    'default': env.db(),  # This uses DATABASE_URL directly
+}
 if MODE == "dev":
     DATABASES = {
         'default': {
@@ -55,9 +58,7 @@ else:
 
 db_from_env = dj_database_url.config(conn_max_age=500)
 
-DATABASES = {
-    'default': env.db(),  # This uses DATABASE_URL directly
-}
+
 
 
 
@@ -202,14 +203,9 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
+STATIC_URL = 'static/'
 STATIC_ROOT = BASE_DIR / 'staticfiles'  # <-- Updated!
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'  # <-- Updated!
-STATIC_URL = 'static/'
-
-STATICFILES_DIRS = [
-    BASE_DIR / "static",  # Where your actual static files live
-]
-
 
 
 
