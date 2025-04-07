@@ -76,8 +76,8 @@ SECRET_KEY = config('SECRET_KEY')
 DEBUG = env('DEBUG')  # <-- Updated!
 
 # Set ALLOWED_HOSTS based on the environment
-ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'recipe-nyumbani.fly.dev']
-CSRF_TRUSTED_ORIGINS = ['https://fly.io/apps/recipe-nyumbani']
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', '.fly.dev']
+CSRF_TRUSTED_ORIGINS = ['https://*.fly.dev']
 
 
 
@@ -202,15 +202,14 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
-
+STATIC_ROOT = BASE_DIR / 'staticfiles'  # <-- Updated!
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'  # <-- Updated!
 STATIC_URL = 'static/'
-
 
 STATICFILES_DIRS = [
     BASE_DIR / "static",  # Where your actual static files live
 ]
-STATIC_ROOT = BASE_DIR / 'staticfiles'  # <-- Updated!
+
 
 
 
