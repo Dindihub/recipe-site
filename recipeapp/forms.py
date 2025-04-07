@@ -21,7 +21,7 @@ class UpdateProfileForm(forms.ModelForm):
 class RecipeForm(forms.ModelForm):
     class Meta:
         model = Recipe
-        fields = '__all__'
+        fields = ('name', 'prep_time', 'total_time', 'ingredients', 'directions', 'picture')
 
 class UpdateRecipeForm(forms.ModelForm):
     class Meta:

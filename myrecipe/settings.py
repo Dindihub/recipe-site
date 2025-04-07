@@ -31,8 +31,10 @@ MODE = env.str('MODE', default='dev')
 # SECRET_KEY (keep this secret for production)
 SECRET_KEY = env.str('SECRET_KEY', default=get_random_secret_key())
 
-# DEBUG flag
-DEBUG = env.bool('DEBUG', default=False)
+
+print("MODE:", env.str("MODE"))
+print("DB_NAME:", env.str("DB_NAME"))
+
 
 #Development
 if MODE == "dev":
@@ -77,8 +79,10 @@ SECRET_KEY = config('SECRET_KEY')
 DEBUG = True
 
 # Set ALLOWED_HOSTS based on the environment
-ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'recipe-nyumbani.fly.dev']
-CSRF_TRUSTED_ORIGINS = ['https://fly.io/apps/recipe-nyumbani']
+# ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'recipe-nyumbani.fly.dev']
+# CSRF_TRUSTED_ORIGINS = ['https://fly.io/apps/recipe-nyumbani']
+
+ALLOWED_HOSTS = env.list("ALLOWED_HOSTS", default=["127.0.0.1", "localhost"])
 
 # Application definition
 

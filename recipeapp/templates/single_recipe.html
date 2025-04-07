@@ -24,13 +24,24 @@
                         <p class="card-text"><strong>Directions:</strong>{{recipe.directions}}</p>
                         <p class="card-text"><strong>Category :</strong>{{recipe.category}}</p>
                         <p class="card-text"><strong>Posted: </strong>{{recipe.date|date}}</p>
+                        <span><button type="submit" class="btn btn-secondary btn-sm">
+                            Update Recipe
+                        </button></span> <span><button type="submit" class="btn btn-secondary btn-sm">
+                            Delete Recipe
+                        </button></span>
                         
                     </div>
                 </div>
+                
+                </button>
             </div>
             
         </div>
 
 </div>
+
+
+
+
 
 {% endblock  %}
