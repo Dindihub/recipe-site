@@ -1,9 +1,9 @@
-# fly.toml app configuration file generated for recipe-nyumbani on 2025-04-06T22:26:18+03:00
+# fly.toml app configuration file generated for recipe-home2 on 2025-04-07T12:45:24+03:00
 #
 # See https://fly.io/docs/reference/configuration/ for information about how to use this file.
 #
 
-app = 'recipe-nyumbani'
+app = 'recipe-home2'
 primary_region = 'jnb'
 console_command = '/code/manage.py shell'
 
