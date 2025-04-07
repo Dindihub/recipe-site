@@ -3,7 +3,7 @@
 
 ## Description
 
-Chakula Chetu ('our food' in swahili) is a one of a kind website exclusively dedicated to amazing African Recipes. While African cuisine is the most delicious,nutritious and healthy, it is not explored because of lack of knowhow on how to prepare it and the nutritional value.Chakula Chetu is changing that. Now Users are allowed to sign up and share their sacred African cuisines passed down from generations. Recipes can be sorted by categories and users can search for particular dishes. Users can also update and delete their recipes. Let's make African food cool again! 
+Chakula Chetu ('our food' in Swahili) is a unique website dedicated to amazing African Recipes. While African cuisine is the most delicious, nutritious, and healthy, it has not been explored because people lack information on how to prepare African foods. Chakula Chetu is changing that. Users can sign up and share their sacred African cuisines passed down through generations. Recipes can be sorted by categories and per food name. Users can also update and delete their recipes. Let's make African food cool again! 
 
 
 ## Author
@@ -13,7 +13,7 @@ Sandra
 You can view the site at:[Chakula Chetu](https://recipe-nyumbani.fly.dev/)
 
 ## Screenshot
-![Chakula Chetu](static/photos/Screenshot from 2022-06-27 13-11-10.png)
+![Image](https://github.com/user-attachments/assets/9fdf0717-e8e3-4c57-adac-ea51a440eac2)
 
 
 ## User Stories
