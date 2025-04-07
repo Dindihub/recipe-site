@@ -32,8 +32,6 @@ MODE = env.str('MODE', default='dev')
 SECRET_KEY = env.str('SECRET_KEY', default=get_random_secret_key())
 
 
-print("MODE:", env.str("MODE"))
-print("DB_NAME:", env.str("DB_NAME"))
 
 
 #Development
