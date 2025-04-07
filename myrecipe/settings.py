@@ -76,7 +76,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = config('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = env('DEBUG')  # <-- Updated!
 
 # Set ALLOWED_HOSTS based on the environment
 ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'recipe-nyumbani.fly.dev']
